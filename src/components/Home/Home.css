@@ -1,0 +1,39 @@
+h2{
+    color: #F5C23E;
+    text-transform: uppercase;
+}
+
+
+
+.img-style{
+    margin-top: 30px ;
+    width: 500px;
+    
+}
+
+.full-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+button{
+   background-color: #F5C23E;
+   height:30px;
+   display: flex;
+   justify-content: center;
+   width: 250px;
+   border-radius: 100px;
+   border: 2px solid black;
+   font-size: 20px;
+   text-transform: uppercase;
+   font-weight: 100;
+}
+
+button:hover{
+background-color: white;
+color: black;
+
+}

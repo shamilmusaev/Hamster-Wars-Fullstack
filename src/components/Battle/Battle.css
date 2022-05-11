@@ -1,0 +1,13 @@
+.container1, .container2{
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    border: 7px solid #F5C23E;
+    margin: 10px 50px;
+}
+
+.container-battle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

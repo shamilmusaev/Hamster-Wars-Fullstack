@@ -1,0 +1,6 @@
+.gallery-container{
+    display: grid;
+    flex-direction: row;
+    justify-content: center;
+   
+}

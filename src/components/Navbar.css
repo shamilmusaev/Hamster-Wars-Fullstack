@@ -1,0 +1,26 @@
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    height: 230px;
+    
+    
+}
+
+nav .nav-item{
+    float: left;
+  color: #F5C23E;
+  text-align: center;
+  padding: 14px 56px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+nav .nav-item:hover{
+    background-color: #ddd;
+  color: black; 
+  border-radius: 50px;
+}
