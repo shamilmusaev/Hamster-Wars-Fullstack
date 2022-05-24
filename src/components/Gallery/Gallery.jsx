@@ -12,25 +12,26 @@ function Gallery() {
   
   useEffect(() => {
     
-    Api.getAllHamsters().then(data => sethamsterList(data));
+    Api.getAllHamsters()
+    .then(data => sethamsterList(data));
   }, []);
 
   
+  
   return (
-
-    
     <div className='gallery-container'>
+
       <Link className="addHamster" to="/newhamster">
                 Add new Hamster
-            </Link>
+      </Link>
     
-    {
-    
-    hamsterList.map(hamster =>
-    
-    <HamsterCard battleMode={false} key={hamster.id} hamster={hamster} />
-    
-    )}
+   
+     
+    <div>
+      {hamsterList.map( hamster =>  <HamsterCard hamster={hamster} />  ) }
+    </div>
+
+   
     
     
     </div>

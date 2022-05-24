@@ -1,61 +1,71 @@
-import React from 'react'
+import { useState, React } from 'react'
+import Api from '../../Api'
 import "./NewHamster.css"
 
-function NewHamster() {
-  return (
-    <div className='form-container'>
+
+
+
+const NewHamster = () => {
+    const [name, setName] = useState("");
     
-    <form>
+
+
+
+
+
+
+
+
+
+
+    const sendForm =  (e) => {
+        e.preventDefault();
+       
+        fetch('http://localhost:1995/hamsters', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify()
+        }) .then(() => {
+            console.log("new hamster added");
+        })
+
+    
+    };
+
+
+
+    return (
+        <>
+            <div className="container-box">
+                <h2>Add new Hamster</h2>
+                <form onSubmit={sendForm}>
                     <div className="user-box">
                         <input
                             type="text"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required={name}
                         />
                         <label>Name</label>
                         
                     </div>
-                    <div className="user-box">
-                        <input
-                            type="text"
-                            
-                        />
-                        
-                        <label>Age</label>
-                    </div>
-                    <div className="user-box">
-                        <input
-                            type="text"
-                            
-                        />
-                        <label>Favorite food</label>
+
+
+
+
+
+
+                    <button
                        
-                    </div>
-                    <div className="user-box">
-                        <input
-                            type="text"
-                            
-                        />
-                        <label>What do your hamster love?</label>
+                        onClick={sendForm}
                        
-                    </div>
-                    <div className="user-box">
-                        <input
-                            type="text"
-                            
-                        />
-                        <label>Hamster image</label>
-                       
-                    </div>
-                    <a
-                        type="submit"
-                        
                     >
                         Add Hamster
-                    </a>
+                    </button>
                 </form>
-
-        
-    </div>
-  )
+            </div>
+        </>
+    )
 }
 
 export default NewHamster

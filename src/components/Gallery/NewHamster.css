@@ -1,3 +1,25 @@
 .form-container{
     background-color: #fff;
 }
+.newhamsterdiv{
+    display: flex;
+    justify-content: center;
+
+align-items: center;
+    background-color: #fff;
+}
+
+.newhamsterdiv2{
+    display: flex;
+    justify-content: center;
+height: 500px;
+width: 500px;
+align-items: center;
+    background-color: #fff;
+}
+
+.App{
+   
+    text-align: center;
+}
+
