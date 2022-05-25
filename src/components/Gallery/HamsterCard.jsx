@@ -1,6 +1,5 @@
 import './HamsterCard.css'
-import Api from '../../Api';
-import {  useState } from 'react';
+
 
 
 
@@ -8,13 +7,6 @@ import {  useState } from 'react';
 
 function HamsterCard(props){
 
-    const [hamster, sethamster] = useState([]);
-   
-
-    function deleteHamster(){
-        Api.deleteHamster()
-        .then(data => sethamster(data));
-    }
     
 
 
@@ -36,11 +28,11 @@ style={{backgroundImage: `url(http://localhost:1995/img/${props.hamster.imgName}
 <span>Games</span> {props.hamster.games} <br />
 <span>Wins</span> {props.hamster.wins} <br />
 <span>Defeats</span> {props.hamster.defeats} <br />
-
 Loves {props.hamster.loves} <br />
 Favorite food {props.hamster.favFood}
 </p>
-<button onClick={() => deleteHamster(hamster.id)}>Remove</button>
+
+
 </div>
 
 </div>

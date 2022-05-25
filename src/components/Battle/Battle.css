@@ -1,13 +1,54 @@
 .container1, .container2{
     background-color: white;
-    width: 300px;
+    width: 350px;
     height: 300px;
     border: 7px solid #F5C23E;
     margin: 10px 50px;
+  
+    
+}
+
+.container1 img:hover, .container2 img:hover{
+    background-color: white;
+    cursor: pointer;
+    transform:scale(1.2);
+    border: 7px solid #F5C23E;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.container1 img, .container2 img{
+width: 350px;
+height: 300px;
+
 }
 
 .container-battle{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+.description{ 
+    color: #F5C23E;
+    text-transform: uppercase;
+    margin-top: 5px;
+    background-color: black;
+    border: 3px solid black ;
+    border-radius: 20px;
+}
+
+.voteresult{
+    background-color: #F5C23E;
+    margin-top: 10px;
+    border: 2px solid #F5C23E;
+    border-radius: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    width: auto;
+}
+
+.roundButton{
+    cursor: pointer;
 }

@@ -1,45 +1,58 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
-import Api from '../../Api.js'
 import HamsterCard from './HamsterCard.jsx'
-
 import "./Gallery.css"
 
 function Gallery() {
 
-  const [hamsterList, sethamsterList] = useState([]);
+  const [hamsters, setHamsters] = useState([]);
   
   useEffect(() => {
-    
-    Api.getAllHamsters()
-    .then(data => sethamsterList(data));
-  }, []);
+    getHamsters()   
+        }, [])
+        async function getHamsters() {
+            const response = await fetch('/hamsters', {method: 'GET'})
+            const data = await response.json()
+            setHamsters(data)
 
+        }
+        async function removeHamster(id) {
+            await fetch("/hamsters/" + id, { method: 'DELETE' })
+           getHamsters()
+        }
+      
   
   
   return (
-    <div className='gallery-container'>
 
-      <Link className="addHamster" to="/newhamster">
-                Add new Hamster
-      </Link>
-    
-   
-     
-    <div>
-      {hamsterList.map( hamster =>  <HamsterCard hamster={hamster} />  ) }
-    </div>
 
-   
-    
-    
-    </div>
-    
-    );
-    
-    
-    
-    }
+
+
+
+
+    <div className="gallery-container">
+
+		{ hamsters.map(hamster => (
+			<div className="container-battle" key={ hamster.id  }>
+      <button onClick={() => removeHamster(hamster.id)}>Remove</button>
+      <HamsterCard hamster = {hamster}/>
+      </div> 
+		))
+	  }
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+	)}
+  
+
 
 export default Gallery;
