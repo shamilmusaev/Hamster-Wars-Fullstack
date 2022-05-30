@@ -14,7 +14,6 @@ function Gallery() {
             const response = await fetch('/hamsters', {method: 'GET'})
             const data = await response.json()
             setHamsters(data)
-
         }
         async function removeHamster(id) {
             await fetch("/hamsters/" + id, { method: 'DELETE' })
@@ -33,8 +32,8 @@ function Gallery() {
     <div className="gallery-container">
 
 		{ hamsters.map(hamster => (
-			<div className="container-battle" key={ hamster.id  }>
-      <button onClick={() => removeHamster(hamster.id)}>Remove</button>
+			<div className="gallery-container-child" key={ hamster.id  }>
+      <button className="delete-hamster" onClick={() => removeHamster(hamster.id)}> <i class="fa fa-trash-o" ></i></button>
       <HamsterCard hamster = {hamster}/>
       </div> 
 		))

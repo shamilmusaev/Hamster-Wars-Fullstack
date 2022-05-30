@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
     let matches = [];
     snapshot.forEach((doc) => {
       const data = doc.data();
-      data.id = doc.id; // id behövs för POST+PUT+DELETE
+      data.id = doc.id; 
       matches.push(data);
     });
     res.send(matches);

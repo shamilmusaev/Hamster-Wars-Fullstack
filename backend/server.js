@@ -18,10 +18,9 @@ const staticImgFolder = path.join(__dirname, 'img')
 
 
 
-//middleware
 
 app.use((req, res, next) => {
-	//logger - skriver tinformation om det request som kommer 
+	
 	console.log(`${req.method} ${req.url} `,
 	req.params);
 	next()

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Home.css"
 import logohamster from './logohamster.png'
 function Home() {
@@ -16,7 +17,9 @@ function Home() {
               
             </div>
 
-            <button>click here to begin</button>
+            <Link className="begin-btn" to="/battle">
+                        BEGIN BATTLE
+                    </Link>
         </div>
 
     );

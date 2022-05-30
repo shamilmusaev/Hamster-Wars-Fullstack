@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
     let items = [];
     snapshot.forEach((doc) => {
       const data = doc.data();
-      data.id = doc.id; // id behövs för POST+PUT+DELETE
+      data.id = doc.id;
       items.push(data);
     });
     items.sort((a,b)=>(a.wins < b.wins) ? 1 : ((b.wins < a.wins) ? -1 : 0))

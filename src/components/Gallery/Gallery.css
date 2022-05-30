@@ -1,6 +1,64 @@
+
+
 .gallery-container{
-    display: grid;
+    display: flex;
     flex-direction: row;
-    justify-content: center;
+    background-color: #F5C23E;
+    overflow-x: scroll; /* Hide horizontal scrollbar */
+  overflow-y: hidden; /* Add vertical scrollbar */
+    min-height: 600px;
+  
+    
+    
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 30px;
+    height:30px;
    
+    
+  }
+
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      
+    background: #F5C23E; 
+    border-radius: 10px;
+    border:2px solid black;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black;
+    border:1px solid white;
+  }
+
+.gallery-container-child{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.delete-hamster{
+
+   background-color: black;
+   color:#F5C23E;
+    width: 40px;
+    height:40px;
+    font-size: 25px;
+    font-weight: 100;
+    margin-bottom: -20px;
+    border: 1px solid #F5C23E;
+    border-radius: 10px;
+   
+}
+
+.delete-hamster:hover{
+    transition: 300ms all ease-in-out;
+   
+color:black;
+    background-color: #ddd;
 }
