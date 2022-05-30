@@ -12,8 +12,9 @@ const losers = require("./routes/losers");
 
 
 const PORT = process.env.PORT || 1995
+
+
 const buildFold = path.join(__dirname, '../build')
-const staticFolder = path.join(__dirname, 'static')
 const staticImgFolder = path.join(__dirname, 'img')
 
 
@@ -26,14 +27,16 @@ app.use((req, res, next) => {
 	next()
 })
 
-app.use( express. json() )
+app.use( express.json() )
 app.use( cors() )
 app.use( express.static(buildFold) )
-app.use( express.static(staticFolder) )
+
 app.use( '/img', express.static(staticImgFolder))
 
 
-
+app.get('/', (req, res) => {
+    res.send('Hamsterwars - Fullstack Project')
+})
 
 
 
