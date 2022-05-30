@@ -15,15 +15,14 @@ const PORT = process.env.PORT || 1995
 
 
 const buildFold = path.join(__dirname, '../build')
-const staticImgFolder = path.join(__dirname, 'img')
+const staticImgFolder = path.join(__dirname, './img')
 
 
 
 
 app.use((req, res, next) => {
 	
-	console.log(`${req.method} ${req.url} `,
-	req.params);
+	console.log(`${req.method} ${req.url} `, req.params);
 	next()
 })
 
