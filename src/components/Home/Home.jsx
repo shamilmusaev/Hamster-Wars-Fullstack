@@ -9,7 +9,7 @@ function Home() {
 
         <div className="full-container">
             
-                <img src={logohamster} className="img-style"/>
+                <img src={logohamster} alt="logo" className="img-style"/>
            
 
             <div className="container">
