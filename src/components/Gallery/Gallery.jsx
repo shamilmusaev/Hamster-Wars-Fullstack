@@ -33,8 +33,9 @@ function Gallery() {
 
 		{ hamsters.map(hamster => (
 			<div className="gallery-container-child" key={ hamster.id  }>
-      <button className="delete-hamster" onClick={() => removeHamster(hamster.id)}> <i class="fa fa-trash-o" ></i></button>
+      
       <HamsterCard hamster = {hamster}/>
+      <button className="delete-hamster" onClick={() => removeHamster(hamster.id)}> <i class="fa fa-trash-o" ></i></button>
       </div> 
 		))
 	  }

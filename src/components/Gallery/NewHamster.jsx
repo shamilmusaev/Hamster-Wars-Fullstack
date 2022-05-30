@@ -49,7 +49,7 @@ const NewHamster = () => {
                             type="text"
                             value={name}
                             onChange={(add) => setName(add.target.value)}
-                            placeholder="Name"
+                            placeholder="Write your hamsters name"
                         />
 
 
@@ -59,7 +59,7 @@ const NewHamster = () => {
                             type="text"
                             value={age}
                             onChange={(add) => setAge(add.target.value)}
-                            placeholder="Age"
+                            placeholder=" And your hamsters age(For example: 2)"
                         />
 
 
@@ -69,7 +69,7 @@ const NewHamster = () => {
                             type="text"
                             value={favFood}
                             onChange={(add) => setFavFood(add.target.value)}
-                            placeholder="Favorite food"
+                            placeholder="Write here hamsters favorite food"
                         />
 
 
@@ -88,7 +88,7 @@ const NewHamster = () => {
                         <input
                             type="text"
                             value={imgName}
-                            placeholder="Ex: hamster-5.jpg"
+                            placeholder="Your hamsters image (For example: hamster-15.jpg)"
                             onChange={(add) => setImgName(add.target.value)}
                         />
 
