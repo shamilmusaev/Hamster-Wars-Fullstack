@@ -1,4 +1,4 @@
-Oper website to test the project 
+Open website to test the project 
 
 https://ithshamsterwars.herokuapp.com/
 
