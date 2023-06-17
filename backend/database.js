@@ -5,7 +5,7 @@ if (process.env.PRIVATE_KEY) {
   serviceAccount = JSON.parse(process.env.PRIVATE_KEY)
 }
 else {
-  serviceAccount = require("./hamsterwars-c14e5-firebase-adminsdk-pzr48-b275c2e3cd.json");
+  serviceAccount = require("./hamstrar-52944-firebase-adminsdk-ho04u-864ae41da8.json");
 }
 
 
